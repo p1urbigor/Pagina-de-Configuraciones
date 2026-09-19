@@ -97,8 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.disabled = true;
                 
                 setTimeout(() => {
-                    displayUsername.textContent = username;
-                    avatarInitial.textContent = username.charAt(0).toUpperCase();
+                    if (displayUsername) displayUsername.textContent = username;
+                    if (avatarInitial) avatarInitial.textContent = username.charAt(0).toUpperCase();
                     loginScreen.classList.remove('active');
                     setTimeout(() => {
                         loginScreen.classList.add('hidden');
